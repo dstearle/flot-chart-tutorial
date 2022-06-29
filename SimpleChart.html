@@ -3,16 +3,36 @@
 <html lang="">
 
 	<head>
+
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
 		<title>Flot Example</title>
+
+		<script language="javascript" type="text/javascript" src="./node_modules/flot/source/jquery.js"></script>
+		<script language="javascript" type="text/javascript" src="./node_modules/flot/source/jquery.canvaswrapper.js"></script>
+		<script language="javascript" type="text/javascript" src="./node_modules/flot/source/jquery.colorhelpers.js"></script>
+		<script language="javascript" type="text/javascript" src="./node_modules/flot/source/jquery.flot.js"></script>
+		<script language="javascript" type="text/javascript" src="./node_modules/flot/source/jquery.flot.saturated.js"></script>
+		<script language="javascript" type="text/javascript" src="./node_modules/flot/source/jquery.flot.browser.js"></script>
+		<script language="javascript" type="text/javascript" src="./node_modules/flot/source/jquery.flot.drawSeries.js"></script>
+		<script language="javascript" type="text/javascript" src="./node_modules/flot/source/jquery.flot.uiConstants.js"></script>
+
 	</head>
 
 	<body>
 
 		<div>test</div>
 
+		<div id="placeholder" style="width:600px;height:300px"></div>
+
 	</body>
+
+	<script type="text/javascript">
+
+		$.plot($("#placeholder"), [ [[0, 0], [1, 1]] ], { yaxis: { max: 1 } });
+
+	</script>
 
 </html>
