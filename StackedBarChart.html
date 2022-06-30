@@ -85,34 +85,45 @@
 	<script type="text/javascript">
 
         // Data to be used for individual lines
-        const data1 = [ [1,4], [2,5], [3,4], [4,9], [5,7], [6,6], [7,2], [8,1], [9,3] ];
+        const data1 = [ [1,getRandomInt(100)], [2,getRandomInt(100)], [3,getRandomInt(100)], [4,getRandomInt(100)], [5,getRandomInt(100)], [6,getRandomInt(100)], [7,getRandomInt(100)], [8,getRandomInt(100)], [9,getRandomInt(100)], [10,getRandomInt(100)], [11,getRandomInt(100)], [12,getRandomInt(100)] ];
 
-        const data2 = [ [1,4], [2,5], [3,4], [4,9], [5,7], [6,6], [7,2], [8,1], [9,3] ];
+        // const data2 = [ [1,4], [2,5], [3,4], [4,9], [5,7], [6,6], [7,2], [8,1], [9,3], [10,3], [11,3], [12,3] ];
 
-        const data3 = [ [1,4], [2,5], [3,4], [4,9], [5,7], [6,6], [7,2], [8,1], [9,3] ];
+        // const data3 = [ [1,4], [2,5], [3,4], [4,9], [5,7], [6,6], [7,2], [8,1], [9,3], [10,3], [11,3], [12,3] ];
+
+        // const data4 = [ [1,4], [2,5], [3,4], [4,9], [5,7], [6,6], [7,2], [8,1], [9,3], [10,3], [11,3], [12,3] ];
+
+        // Generates random number from 0 to 100
+        function getRandomInt(max) {
+
+            return Math.floor(Math.random() * max);
+
+        }
 
         // An array of all of the data to be used for the chart
         const data = [
             
             { 
-                color: "#00802b",
                 data: data1, 
                 label: "test", 
-                lines: {show:true} 
-            },
-
-            { 
-                color: "#ff6600",
-                data: data2, 
-                label: "test2", 
                 bars: {show:true} 
             },
 
-            { 
-                color: "#00ffff",
-                data: data3, label: "test3", 
-                points: {show:true} 
-            },
+            // { 
+            //     data: data2, 
+            //     label: "test2", 
+            //     bars: {show:true} 
+            // },
+
+            // { 
+            //     data: data3, label: "test3", 
+            //     bars: {show:true} 
+            // },
+
+            // { 
+            //     data: data4, label: "test4", 
+            //     bars: {show:true} 
+            // },
         
         ];
 
