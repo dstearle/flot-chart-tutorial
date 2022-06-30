@@ -14,12 +14,12 @@
 		<script language="javascript" type="text/javascript" src="./node_modules/flot/source/jquery.canvaswrapper.js"></script>
 		<script language="javascript" type="text/javascript" src="./node_modules/flot/source/jquery.colorhelpers.js"></script>
 		<script language="javascript" type="text/javascript" src="./node_modules/flot/source/jquery.flot.js"></script>
-        <script language="javascript" type="text/javascript" src="./node_modules/flot/source/jquery.flot.stack.js"></script>
 		<script language="javascript" type="text/javascript" src="./node_modules/flot/source/jquery.flot.saturated.js"></script>
 		<script language="javascript" type="text/javascript" src="./node_modules/flot/source/jquery.flot.browser.js"></script>
 		<script language="javascript" type="text/javascript" src="./node_modules/flot/source/jquery.flot.drawSeries.js"></script>
 		<script language="javascript" type="text/javascript" src="./node_modules/flot/source/jquery.flot.uiConstants.js"></script>
-        
+        <script language="javascript" type="text/javascript" src="./node_modules/flot/source/jquery.flot.stack.js"></script>
+        <script language="javascript" type="text/javascript" src="./node_modules/flot/source/jquery.flot.legend.js"></script>
 
 	</head>
 
@@ -152,7 +152,10 @@
         // The options to be used for the chart
         const options = {
 
-            legend: {position:"nw"},
+            legend: {
+                show: true,
+                position:"ne",
+            },
             series: { 
 
                 // Needed to set bar charts to stacked bar charts
