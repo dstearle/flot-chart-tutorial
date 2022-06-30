@@ -1,3 +1,4 @@
+/* Fixes the legends for charts from being all black */
 .legendLayer .background {
     fill: rgba(255, 255, 255, 0.85);
     stroke: rgba(0, 0, 0, 0.85);

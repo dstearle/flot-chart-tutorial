@@ -22,6 +22,12 @@
 
 <br>
 
+**Known Issues:**
+
+- Legends Being Black: For whatever reason when creating legends for a chart using the flot plugin the legends all apear black despite whatever settings you use for the options. The only workaround I found was to override it with css (which is located in the "style.css" file).
+
+<br>
+
 **References:**
 
 - Flot: The official website for Flot "http://www.flotcharts.org/".
