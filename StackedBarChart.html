@@ -14,10 +14,12 @@
 		<script language="javascript" type="text/javascript" src="./node_modules/flot/source/jquery.canvaswrapper.js"></script>
 		<script language="javascript" type="text/javascript" src="./node_modules/flot/source/jquery.colorhelpers.js"></script>
 		<script language="javascript" type="text/javascript" src="./node_modules/flot/source/jquery.flot.js"></script>
+        <script language="javascript" type="text/javascript" src="./node_modules/flot/source/jquery.flot.stack.js"></script>
 		<script language="javascript" type="text/javascript" src="./node_modules/flot/source/jquery.flot.saturated.js"></script>
 		<script language="javascript" type="text/javascript" src="./node_modules/flot/source/jquery.flot.browser.js"></script>
 		<script language="javascript" type="text/javascript" src="./node_modules/flot/source/jquery.flot.drawSeries.js"></script>
 		<script language="javascript" type="text/javascript" src="./node_modules/flot/source/jquery.flot.uiConstants.js"></script>
+        
 
 	</head>
 
@@ -84,6 +86,9 @@
 
 	<script type="text/javascript">
 
+        // Needed to use "Stack" plugin for stacked bar charts
+        var stack = 0;
+
         // Generates random number with a parameter for maximum integer
         function getRandomInt(max) {
 
@@ -114,6 +119,7 @@
 
             }
 
+            // Push dataArr2 to dataArr
             dataArr.push(dataArr2)
 
         }
@@ -124,31 +130,42 @@
             { 
                 data: dataArr[0], 
                 label: "test", 
-                bars: {show:true} 
             },
 
             { 
                 data: dataArr[1], 
                 label: "test2", 
-                bars: {show:true} 
             },
 
             { 
                 data: dataArr[2], 
                 label: "test3", 
-                bars: {show:true} 
             },
 
             { 
                 data: dataArr[3], 
                 label: "test4", 
-                bars: {show:true} 
             },
         
         ];
 
         // The options to be used for the chart
-        const options = { legend: {position:"nw"} };
+        const options = {
+
+            legend: {position:"nw"},
+            series: { 
+
+                // Needed to set bar charts to stacked bar charts
+                stack: stack,
+                // Applies the "bars" setting to all data entries
+                bars: {
+                    show:true,
+                    align: "center"
+                }
+
+            }
+
+        };
 
         // Runs the function when the document is loaded
 		$(document).ready(function() {
