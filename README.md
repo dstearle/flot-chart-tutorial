@@ -5,6 +5,12 @@
 **About:**
 
 - This project is a collection of charts built using Flot which is a Javascript library plugin for jQueryS.
+- Types of charts showcased in this project:
+    - Simple Chart
+    - Basic Line Chart
+    - Basic Bar Chart
+    - Basic Points Chart
+    - Mixed Chart
 
 <br>
 
