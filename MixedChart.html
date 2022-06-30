@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="">
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+		<title>Flot Example || Mixed Chart</title>
+
+		<script language="javascript" type="text/javascript" src="./node_modules/flot/source/jquery.js"></script>
+		<script language="javascript" type="text/javascript" src="./node_modules/flot/source/jquery.canvaswrapper.js"></script>
+		<script language="javascript" type="text/javascript" src="./node_modules/flot/source/jquery.colorhelpers.js"></script>
+		<script language="javascript" type="text/javascript" src="./node_modules/flot/source/jquery.flot.js"></script>
+		<script language="javascript" type="text/javascript" src="./node_modules/flot/source/jquery.flot.saturated.js"></script>
+		<script language="javascript" type="text/javascript" src="./node_modules/flot/source/jquery.flot.browser.js"></script>
+		<script language="javascript" type="text/javascript" src="./node_modules/flot/source/jquery.flot.drawSeries.js"></script>
+		<script language="javascript" type="text/javascript" src="./node_modules/flot/source/jquery.flot.uiConstants.js"></script>
+
+	</head>
+
+	<body>
+
+		<div style="display: grid; grid-column: 1; justify-content:center; text-align: center;">
+
+            <!-- Navbar -->
+            <nav>
+
+                <!-- Simple Chart -->
+                <a href="http://127.0.0.1:5500/SimpleChart.html">
+                    
+                    <button>Simple Chart</button>
+
+                </a>
+
+                <!-- Basic Line Chart -->
+                <a href="http://127.0.0.1:5500/BasicLineChart.html">
+                    
+                    <button>Basic Line Chart</button>
+
+                </a>
+
+                <!-- Basic Bar Chart -->
+                <a href="http://127.0.0.1:5500/BasicBarChart.html">
+                    
+                    <button>Basic Bar Chart</button>
+
+                </a>
+
+                <!-- Mixed Chart -->
+                <a href="http://127.0.0.1:5500/MixedChart.html">
+                    
+                    <button>Mixed Chart</button>
+
+                </a>
+
+            </nav>
+
+			<!-- Title -->
+			<h1>Mixed Chart</h1>
+
+			<!-- Flot Chart -->
+			<div id="placeholder" style="width:600px;height:300px"></div>
+
+		</div>
+
+	</body>
+
+	<script type="text/javascript">
+
+        // Data to be used for individual lines
+        const data1 = [ [1,4], [2,5], [3,4], [4,9], [5,7], [6,6], [7,2], [8,1], [9,3] ];
+
+        // An array of all of the data to be used for the chart
+        const data = [{ data: data1, label: "test", bars: {show:true} }];
+
+        // The options to be used for the chart
+        const options = { legend: {position:"nw"} };
+
+        // Runs the function when the document is loaded
+		$(document).ready(function() {
+
+            // A chart to be rendered on the page
+            let chart1 = $.plot($("#placeholder"), data, options);
+
+        });
+
+	</script>
+
+</html>
