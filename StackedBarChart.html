@@ -84,19 +84,37 @@
 
 	<script type="text/javascript">
 
-        // Data to be used for individual lines
-        const data1 = [ [1,getRandomInt(100)], [2,getRandomInt(100)], [3,getRandomInt(100)], [4,getRandomInt(100)], [5,getRandomInt(100)], [6,getRandomInt(100)], [7,getRandomInt(100)], [8,getRandomInt(100)], [9,getRandomInt(100)], [10,getRandomInt(100)], [11,getRandomInt(100)], [12,getRandomInt(100)] ];
-
-        // const data2 = [ [1,4], [2,5], [3,4], [4,9], [5,7], [6,6], [7,2], [8,1], [9,3], [10,3], [11,3], [12,3] ];
-
-        // const data3 = [ [1,4], [2,5], [3,4], [4,9], [5,7], [6,6], [7,2], [8,1], [9,3], [10,3], [11,3], [12,3] ];
-
-        // const data4 = [ [1,4], [2,5], [3,4], [4,9], [5,7], [6,6], [7,2], [8,1], [9,3], [10,3], [11,3], [12,3] ];
-
-        // Generates random number from 0 to 100
+        // Generates random number with a parameter for maximum integer
         function getRandomInt(max) {
 
             return Math.floor(Math.random() * max);
+
+        }
+
+        // Data to be used for individual lines
+        let dataArr = [];
+
+        // For loop to create four data objects
+        for(let i = 0; i < 4; i++){
+
+            // Array of data objects for a single set of data
+            let dataArr2 = [];
+
+            // For loop to create twelve points of data to be used in a data object
+            for(let i = 0; i < 12; i++){
+
+                // Generates random number for the Y axis
+                let randNum = getRandomInt(100);
+
+                // Sets the month for the X axis
+                let getMonth = i +1;
+
+                // Pushes the point of data to dataArr2
+                dataArr2.push([getMonth, randNum]);
+
+            }
+
+            dataArr.push(dataArr2)
 
         }
 
@@ -104,26 +122,28 @@
         const data = [
             
             { 
-                data: data1, 
+                data: dataArr[0], 
                 label: "test", 
                 bars: {show:true} 
             },
 
-            // { 
-            //     data: data2, 
-            //     label: "test2", 
-            //     bars: {show:true} 
-            // },
+            { 
+                data: dataArr[1], 
+                label: "test2", 
+                bars: {show:true} 
+            },
 
-            // { 
-            //     data: data3, label: "test3", 
-            //     bars: {show:true} 
-            // },
+            { 
+                data: dataArr[2], 
+                label: "test3", 
+                bars: {show:true} 
+            },
 
-            // { 
-            //     data: data4, label: "test4", 
-            //     bars: {show:true} 
-            // },
+            { 
+                data: dataArr[3], 
+                label: "test4", 
+                bars: {show:true} 
+            },
         
         ];
 
