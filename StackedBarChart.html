@@ -86,6 +86,9 @@
 			<!-- Flot Chart -->
 			<div id="placeholder" style="width:600px;height:300px"></div>
 
+            <!-- Legend Container -->
+            <div id="legendContainer" class="legend" style="width:9em;height:8em;border-style:solid;border-color:threedface"></div>
+
 		</div>
 
 	</body>
@@ -94,6 +97,9 @@
 
         // Needed to use "Stack" plugin for stacked bar charts
         var stack = 0;
+
+        // The Legend Container variable
+        var legendContainer = document.getElementById("legendContainer");
 
         // Generates random number with a parameter for maximum integer
         function getRandomInt(max) {
@@ -159,8 +165,9 @@
         const options = {
 
             legend: {
-                show: false,
-                position:"ne",
+                show: true,
+                noColumns: 2,
+                container: legendContainer
             },
             series: { 
 
