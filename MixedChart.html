@@ -73,8 +73,34 @@
         // Data to be used for individual lines
         const data1 = [ [1,4], [2,5], [3,4], [4,9], [5,7], [6,6], [7,2], [8,1], [9,3] ];
 
+        const data2 = [ [1,4], [2,5], [3,4], [4,9], [5,7], [6,6], [7,2], [8,1], [9,3] ];
+
+        const data3 = [ [1,4], [2,5], [3,4], [4,9], [5,7], [6,6], [7,2], [8,1], [9,3] ];
+
         // An array of all of the data to be used for the chart
-        const data = [{ data: data1, label: "test", bars: {show:true} }];
+        const data = [
+            
+            { 
+                color: "#00802b",
+                data: data1, 
+                label: "test", 
+                lines: {show:true} 
+            },
+
+            { 
+                color: "#ff6600",
+                data: data2, 
+                label: "test2", 
+                bars: {show:true} 
+            },
+
+            { 
+                color: "#00ffff",
+                data: data3, label: "test3", 
+                points: {show:true} 
+            },
+        
+        ];
 
         // The options to be used for the chart
         const options = { legend: {position:"nw"} };
