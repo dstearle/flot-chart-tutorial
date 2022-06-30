@@ -37,7 +37,22 @@
 
 	<script type="text/javascript">
 
-		$.plot($("#placeholder"), [ [[0, 0], [1, 1]] ], { yaxis: { max: 1 } });
+        // Data to be used for individual lines
+        const data1 = [ [1,4], [2,5], [3,4], [4,9], [5,7], [6,6], [7,2], [8,1], [9,3] ];
+
+        // An array of all of the data to be used for the chart
+        const data = [{ data: data1, label: "test", lines: {show:true} }];
+
+        // The options to be used for the chart
+        const options = { legend: {position:"nw"} };
+
+        // Runs the function when the document is loaded
+		$(document).ready(function() {
+
+            // A chart to be rendered on the page
+            var chart1 = $.plot($("#placeholder"), data, options);
+
+        });
 
 	</script>
 
