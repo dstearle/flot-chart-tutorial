@@ -11,6 +11,7 @@
     - Basic Bar Chart
     - Basic Points Chart
     - Mixed Chart
+    - Stacked Bar Chart
 
 <br>
 
